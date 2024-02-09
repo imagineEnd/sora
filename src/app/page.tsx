@@ -25,7 +25,7 @@ export default function Home() {
     <div className="bg-index-bg w-screen h-screen bg-cover bg-no-repeat relative flex justify-center items-center">
       <div className="text-white flex flex-col items-center">
         <span className="font-pinyonScript text-6xl">Sora</span>
-        <span className="text-4xl mt-6 font-pangmenzhengdaocushuti font-thin">
+        <span className="text-4xl mt-6 font-cursive font-thin text-center">
           生活原本沉闷 但跑起来就有风
         </span>
         {/* i-mdi-home */}

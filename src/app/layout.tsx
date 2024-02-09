@@ -10,11 +10,11 @@ const pinyonScriptFont = localFont({
   variable: '--font-pinyonscript-regular',
 })
 
-const pangMenZhangDaoCuShuTi = localFont({
-  src: '../../public/PangMenZhengDaoCuShuTi.ttf',
-  display: 'swap',
-  variable: '--font-pangmenzhengdaocushuti',
-})
+// const pangMenZhangDaoCuShuTi = localFont({
+//   src: '../../public/PangMenZhengDaoCuShuTi.ttf',
+//   display: 'swap',
+//   variable: '--font-pangmenzhengdaocushuti',
+// })
 
 export const metadata: Metadata = {
   title: 'Sora',
@@ -35,9 +35,7 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body
-        className={`${pinyonScriptFont.variable} ${pangMenZhangDaoCuShuTi.variable}`}
-      >
+      <body className={`${pinyonScriptFont.variable}`}>
         <main>{children}</main>
         <RotateLoading />
         <Script id="hide-loading">

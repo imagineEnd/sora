@@ -18,7 +18,8 @@ const config = {
       },
       fontFamily: {
         pinyonScript: ['var(--font-pinyonscript-regular)'],
-        pangmenzhengdaocushuti: ['var(--font-pangmenzhengdaocushuti)'],
+        cursive: ['cursive'],
+        // pangmenzhengdaocushuti: ['var(--font-pangmenzhengdaocushuti)'],
       },
     },
   },
