@@ -36,9 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${pinyonScriptFont.variable}`}>
-        <main>{children}</main>
         <RotateLoading />
-        <Script id="hide-loading">
+        <main>{children}</main>
+
+        <Script id="hide-loading" strategy="beforeInteractive">
           {`window.addEventListener('load', ${endLoading})`}
         </Script>
       </body>
