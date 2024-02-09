@@ -1,20 +1,33 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
+import {
+  iconsPlugin,
+  getIconCollections,
+  dynamicIconsPlugin,
+} from '@egoist/tailwindcss-icons'
 
-const config: Config = {
+const config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'index-bg': "url('/bg.png')",
+      },
+      fontFamily: {
+        pinyonScript: ['var(--font-pinyonscript-regular)'],
+        pangmenzhengdaocushuti: ['var(--font-pangmenzhengdaocushuti)'],
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [
+    iconsPlugin({
+      collections: getIconCollections('all'),
+    }),
+    dynamicIconsPlugin(),
+  ],
+} satisfies Config
+
+export default config
