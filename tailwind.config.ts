@@ -4,6 +4,7 @@ import {
   getIconCollections,
   dynamicIconsPlugin,
 } from '@egoist/tailwindcss-icons'
+import { INDEX_BG_URL } from '@/config/image'
 
 const config = {
   content: [
@@ -14,7 +15,7 @@ const config = {
   theme: {
     extend: {
       backgroundImage: {
-        'index-bg': "url('/bg.png')",
+        'index-bg': `url('${INDEX_BG_URL}')`,
       },
       fontFamily: {
         pinyonScript: ['var(--font-pinyonscript-regular)'],
